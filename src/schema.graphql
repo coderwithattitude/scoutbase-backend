@@ -1,0 +1,20 @@
+type Query {
+    users: [User!]!
+    user(id: ID!): User
+}
+
+type mutation {
+    createUser(username: String!, password: String!): Authpayload!
+    login(username: String!, password: String!): Authpayload!
+}
+
+type User {
+    id: ID!
+    username: String!
+    password: String!
+}
+
+type Authpayload {
+    token: String
+    user: User
+}
