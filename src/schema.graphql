@@ -1,11 +1,36 @@
 type Query {
     users: [User!]!
     user(id: ID!): User
+    movies: [Movie!]!
+    
 }
 
 type mutation {
     createUser(username: String!, password: String!): Authpayload!
     login(username: String!, password: String!): Authpayload!
+}
+scalar Date
+type Movie {
+    id: ID!
+    title: String!
+    year: String!
+    rating: Int!
+    actors: [Actor!]!
+}
+
+type Actor {
+    id: ID!
+    name: String!
+    birthday: Date!
+    country: String!
+    directors: [Director!]!
+}
+
+type Director {
+    id: ID!
+    name: String!
+    birthday: Date!
+    country: String!
 }
 
 type User {
