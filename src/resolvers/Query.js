@@ -19,9 +19,7 @@ async function movies(parent, args, context, info) {
     return Movies(movie => { user ? {
         ...movie,
         scoutbase_rating: getRating(5, 9)
-    } : {
-        ...movie
-    }});
+    } : movie });
 
 
 }
