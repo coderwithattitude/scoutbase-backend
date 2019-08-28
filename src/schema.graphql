@@ -1,7 +1,7 @@
 type Query {
     users: [User!]!
     user(id: ID!): User
-    movies: (filter: String, skip: Int, first: Int)[Movie!]!
+    movies: (filter: String, skip: Int, first:)[Movie!]!
     
 }
 

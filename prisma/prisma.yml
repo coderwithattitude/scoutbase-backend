@@ -1,4 +1,5 @@
-endpoint: http://localhost:4006
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/coderwithattitude/scoutbase-backend/dev
 
 datamodel: datamodel.prisma
 

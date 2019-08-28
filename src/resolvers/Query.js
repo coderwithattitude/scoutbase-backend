@@ -1,5 +1,4 @@
-import { getUserId } from '../utils';
-import { userInfo } from 'os';
+const { getUserId } = require('../utils');
 async function movies(parent, args, context, info) {
     const where = args.filter ? {
         OR: [
@@ -26,4 +25,8 @@ async function movies(parent, args, context, info) {
 
 function getRating(x,y) {
     return (Math.random() * (x - y + 1) + x).toFixed(1);
+}
+
+module.exports = {
+    movies,
 }

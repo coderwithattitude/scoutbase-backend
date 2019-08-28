@@ -15,7 +15,7 @@ type Movie {
 type Actor {
     id: ID! @id
     name: String!
-    birthday: Date!
+    birthday: String!
     country: String!
     directors: [Director!]!
 }
@@ -23,7 +23,7 @@ type Actor {
 type Director {
     id: ID! @id
     name: String!
-    birthday: Date!
+    birthday: String!
     country: String!
 }
 
