@@ -1,11 +1,16 @@
 const { GraphQLServer } = require('graphql-yoga');
+const { GraphQLDateTime } = require('graphql-iso-date')
+const Query = require('./resolvers/Query')
+const Mutation = require('./resolvers/Mutation');
 
 const resolvers = {
-
+GraphQLDateTime,
+Query,
+Mutation,
 }
 
 const server = new GraphQLServer({
-    typeDefs: './schema.graphql',
+    typeDefs: './src/schema.graphql',
     resolvers,
     context: request => {
         return {
